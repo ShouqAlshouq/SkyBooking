@@ -1,62 +1,56 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# ---------------------------------------------------------------
+# SkyBooking .gitignore  (Xcode / SwiftUI / Swift Package Manager)
+# ---------------------------------------------------------------
 
-## User settings
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Xcode: per-user state (contains your username + window layout) ---
 xcuserdata/
-
-## Obj-C/Swift specific
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
 *.hmap
-
-## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# --- Xcode: build output ---
+build/
+DerivedData/
+*.xcarchive
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
+# --- Swift Package Manager ---
 .build/
+.swiftpm/
+# NOTE: Package.resolved is intentionally NOT ignored.
+# For an app, commit it so everyone builds the exact same Firebase version.
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+# --- CocoaPods / Carthage (not used today, harmless if added later) ---
+Pods/
 Carthage/Build/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
+# --- Fastlane (if you ever add it) ---
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# --- Secrets & local config ---
+# Firebase client config: contains your project's API key and IDs.
+# Keep it out of a public repo; teammates copy GoogleService-Info.plist.example
+# to SkyBooking/GoogleService-Info.plist and fill in their own values.
+# (If your repo is PRIVATE and your instructor needs to run the app, you can
+#  delete this line and commit the file instead.)
+SkyBooking/GoogleService-Info.plist
+.env
+*.p12
+*.pem
+*.mobileprovision
+
+# --- Course paperwork (not part of the app) ---
+*Rubric*.docx
