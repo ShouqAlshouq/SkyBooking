@@ -2,7 +2,7 @@
 
 A SwiftUI flight-booking app for iPhone and iPad. Users create an account, browse and search flights, book them, and manage their profile and bookings — all backed by Firebase.
 
-Built for **CIA-3013 · Advanced Mobile Applications** (HCT, semester 202520).
+Built for **CIA-3013 · Advanced Mobile Applications**.
 
 ---
 
@@ -144,5 +144,3 @@ SkyBookingApp ── signed in? ──► ContentView (TabView)
 ## Author
 
 **Shouq Alshouq** — www.linkedin.com/in/shouq-alshouq-ba3691264
-
-*Course project for HCT · CIA-3013 Advanced Mobile Applications.*
